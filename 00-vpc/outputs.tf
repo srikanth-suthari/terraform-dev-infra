@@ -37,5 +37,6 @@ output "database_subnet_ids" {
 
 output "vpc-id" {
     value = aws_ssm_parameter.vpc_id
-    sensitive = false
+    # If we want to print the ssm parameter values we need to pass this true or false, if not i will not print the values of that parameter
+    sensitive = true
 }
