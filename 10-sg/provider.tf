@@ -9,7 +9,7 @@ terraform {
     # The bucket should be created first in the aws s3 service
     bucket = "my-remote-state-terraform"
     # Then terraform will automatically create this key in that provided bucket
-    key    = "vpc-module-demo"
+    key    = "terraform-dev-infra-sg"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
