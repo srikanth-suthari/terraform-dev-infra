@@ -34,3 +34,8 @@ output "database_subnet_ids" {
     description = "List of database subnet IDs"
     value = module.vpc.database_subnet_ids
 }
+
+output "vpc-id" {
+    value = aws_ssm_parameter.vpc_id
+    sensitive = false
+}
