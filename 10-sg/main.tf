@@ -9,7 +9,6 @@
 
 } */
 
-
 module "sg" {
   count = length(var.sg_names)
   source = "git::https://github.com/srikanth-suthari/terraform-aws-sg.git?ref=main"
