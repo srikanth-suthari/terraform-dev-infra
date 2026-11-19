@@ -3,6 +3,7 @@ locals {
     ami_id = data.aws_ami.joindevops.id
     #Bastion sg is created by the sg module, stored in ssm parameters and we are retrieving it using data sources
     bastion_sg_id = data.aws_ssm_parameter.bastion_sg_id.value
+    public_subnet_id = split("," , data.aws_ssm_parameter.public_subnet_ids.value)[0]
     common_tags = {
         Project = var.project_name
         Environment = var.environment
