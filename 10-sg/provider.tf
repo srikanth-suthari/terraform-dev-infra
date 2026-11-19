@@ -7,9 +7,9 @@ terraform {
   }
   backend "s3" {
     # The bucket should be created first in the aws s3 service
-    bucket = "my-remote-state-terraform"
+    bucket = "roboshop-dev-infrastructure"
     # Then terraform will automatically create this key in that provided bucket
-    key    = "sg-module-demo"
+    key    = "roboshop-dev-infra-sg's"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
