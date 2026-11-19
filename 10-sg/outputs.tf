@@ -6,3 +6,8 @@ output "sg_id" {
 output "sg_ids" {
     value = module.sg[0].sg_id
 }
+
+output "bastion_sg_id" {
+    value = data.aws_ssm_parameter.bastion_sg_id
+    sensitive = true
+}
